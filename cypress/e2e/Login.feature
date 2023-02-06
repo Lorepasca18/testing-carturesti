@@ -11,3 +11,9 @@ Feature: Carturesti - Login page
         And I click on the autentificare button
         Then I should have Salut button
 
+    Scenario: Invalid Login Page
+        And I click on the utilizator existent button
+        And I type an wrong emaill adress
+        And I type a wrong password
+        And I click on the autentificare button
+        Then I should have presented with header text 
