@@ -3,6 +3,7 @@ import { Given, When, Then, Before } from "@badeball/cypress-cucumber-preprocess
 
 const url = "https://carturesti.ro/"
 
+
 Given(`I navigate to the carturesti homepage`, () => {
   cy.visit(url);
 });

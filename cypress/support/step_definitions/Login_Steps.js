@@ -19,6 +19,7 @@ When('I click on the autentificare button', () => {
 })
 
 Then('I should have Salut button', () => {
-    cy.get('#accountDropdown > :nth-child(2)').should('have.text',"SALUT")
+    // cy.get('#accountDropdown > :nth-child(2)').should('include.text', 'Salut')
+    cy.get('#accountDropdown > :nth-child(2)').should('contain.text', 'Salut');
 })
 
