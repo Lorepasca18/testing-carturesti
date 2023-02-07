@@ -11,3 +11,8 @@ Given(`I navigate to the carturesti homepage`, () => {
 When(`I click on the login button`, () => {
   cy.get(':nth-child(2) > .md-button > span.ng-scope').click();
   }); 
+
+  When(`I click on the search input`, () => {
+    cy.get('#search-input').click();
+  
+  }); 

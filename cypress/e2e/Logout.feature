@@ -10,4 +10,4 @@ Feature: Carturesti - Login page
         Then I should have Salut button
         And I click Salut button
         And I press logout button
-        #Then I should have login button
+        Then I should have login button
