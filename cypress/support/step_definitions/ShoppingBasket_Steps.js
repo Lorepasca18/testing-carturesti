@@ -47,6 +47,44 @@ When('I click on the delete button', () => {
 });
 
 Then('I should be presented with text', () => {
-  cy.get('h1').should('have.text', 'Nu mă lăsa gol')
+  cy.get('h1').should('have.text', ' Nu mă lăsa gol ')
  
 });
+
+When('I pick an indisponible book', () => {
+  cy.get(':nth-child(1) > .product-grid-container > .clean-a').click();
+
+});
+
+When('I click on the adauga in wishlist button', () => {
+  cy.get('.addToWishList > .clean-a').click();
+
+});
+
+When('I press on the adauga in wishlist button', () => {
+  cy.get('[style="font-size: 15px;"]').click();
+  
+});
+
+When('I click on the adauga in button', () => {
+  cy.get('strong.ng-binding').click();
+  
+});
+
+When('I click on the salut button', () => {
+  cy.get('#accountDropdown > :nth-child(2)').click();
+  
+});
+
+When('I navigate to the wishlist button', () => {
+  cy.get('.open > .dropdown-menu > :nth-child(3) > a').click();
+  
+});
+
+Then('I should have the product in wishlist', () => {
+  cy.get('.md-title > .ng-binding').should('have.text', ' ⚑ ❤ ✂')
+  //cy.xpath('/html/body/div[2]/div[2]/div[2]/div[2]/div/md-card/md-card-content/md-list/md-card').should('have.product', 'Nemuritor in poezie')
+  
+  
+});
+
