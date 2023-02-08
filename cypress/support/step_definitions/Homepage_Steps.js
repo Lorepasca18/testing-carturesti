@@ -16,3 +16,7 @@ When(`I click on the login button`, () => {
     cy.get('#search-input').click();
   
   }); 
+
+  When(`I click on the shopping basket button`, () => {
+    cy.get('.checkout__text').click();
+  }); 
