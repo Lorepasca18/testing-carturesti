@@ -88,3 +88,74 @@ Then('I should have the product in wishlist', () => {
   
 });
 
+When('I type a book', () => {
+  cy.get('#search-input').type("psihologia pentru oameni obisnuiti");
+  
+});
+
+When('I choose a book', () => {
+  cy.get(':nth-child(1) > .product-grid-container > .clean-a').click();
+});
+
+When('I click continua la date de livrare button', () => {
+  cy.get('.md-accent').click();
+});
+
+When('I select persoana fizica box', () => {
+  cy.get('#checkoutaddressform-is_company > :nth-child(1) > .checkmark').click();
+});
+
+When('I type a last name', () => {
+  cy.get('#checkoutaddressform-firstname').type("Lorena")
+  
+});
+
+When('I type a first name', () => {
+  cy.get('#checkoutaddressform-lastname').type("Pasca")
+  
+});
+When('I type a number phone', () => {
+  cy.get('#checkoutaddressform-phone_number').type("0761234567")
+  
+});
+
+When('I select a country', () => {
+  cy.get('#country-dropdown').type("183").type('{enter}');
+  
+});
+
+When('I select a county', () => {
+  cy.get('#counties-dropdown').select("216").type('{enter}');
+  
+});
+
+When('I select a city', () => {
+  cy.get('#checkoutaddressform-id_city').select("7919").type('{enter}');
+  
+});
+
+When('I type an adress', () => {
+  cy.get('#checkoutaddressform-address').type("Str.Bucuresti, nr.1")
+  
+});
+
+When('I type a postal code', () => {
+  cy.get('#checkoutaddressform-zip_code').type("1234")
+  
+});
+
+When('I select curier rapid box', () => {
+  cy.get('#checkoutdeliveryform-shippingmethodid > :nth-child(1)').click();
+});
+
+When('I click continua la facturare si plata button', () => {
+  cy.get(':nth-child(6) > :nth-child(2) > .md-accent').click();
+});
+
+//When('I mark off curier rapid box', () => {
+ //cy.xpath('//*[@id="checkoutdeliveryform-shippingmethodid"]/label[1]/div').click();
+//});
+
+//When('I press continua la facturare si plata button', () => {
+  //cy.get(':nth-child(6) > :nth-child(2) > .md-accent').click();
+//});
